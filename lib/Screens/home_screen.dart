@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:mini_gemini/Constants/secrets.dart';
 import 'package:mini_gemini/Widgets/message_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     super.initState();
     _model = GenerativeModel(
       model: 'gemini-pro',
-      apiKey: 'api-key',
+      apiKey: apiKey,
     );
     _chatSession = _model.startChat();
   }
@@ -31,7 +32,15 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Nothing to show!'),
+        title: const Center(
+          child: Text(
+            'Lets Chat with Sakshi, Jahanavi, Abhishek & Utsab',
+            style: TextStyle(
+              fontSize: 50,
+              color: Colors.brown,
+            ),
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
