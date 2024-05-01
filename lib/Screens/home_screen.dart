@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final FocusNode _textFieldFocus = FocusNode();
   final TextEditingController _textController = TextEditingController();
   final ScrollController _scrollController = ScrollController();
-  bool _loading = false;
+  // bool _loading = false;
 
   @override
   void initState() {
@@ -125,7 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Future<void> _sendChatMessage(String message) async {
     setState(() {
-      _loading = true;
+      // _loading = true;
     });
 
     try {
@@ -138,19 +138,19 @@ class _HomeScreenState extends State<HomeScreen> {
         return;
       } else {
         setState(() {
-          _loading = false;
+          // _loading = false;
           _scrollDown();
         });
       }
     } catch (e) {
       _showError(e.toString());
       setState(() {
-        _loading = false;
+        // _loading = false;
       });
     } finally {
       _textController.clear();
       setState(() {
-        _loading = false;
+        // _loading = false;
       });
       _textFieldFocus.requestFocus();
     }
