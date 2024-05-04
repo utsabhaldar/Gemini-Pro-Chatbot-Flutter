@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:mini_gemini/Constants/secrets.dart';
+import 'package:mini_gemini/Widgets/drawer_items.dart';
 import 'package:mini_gemini/Widgets/message_widget.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -31,14 +32,14 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            'Lets Chat with Sakshi, Jahanavi, Abhishek & Utsab',
-            style: TextStyle(
-              fontSize: 50,
-              color: Colors.brown,
-            ),
+        backgroundColor: const Color.fromARGB(255, 169, 229, 235),
+        title: const Text(
+          'Good afternoon, Mr. Arvind',
+          style: TextStyle(
+            fontSize: 20,
+            color: Color.fromARGB(255, 45, 34, 30),
           ),
         ),
       ),
@@ -74,7 +75,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Expanded(
                     child: TextField(
-                      autofocus: true,
                       focusNode: _textFieldFocus,
                       decoration: textfieldDecoration(),
                       controller: _textController,
@@ -97,13 +97,16 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
+      drawer: const Drawer(
+        child: DrawerItems(),
+      ),
     );
   }
 
   InputDecoration textfieldDecoration() {
     return InputDecoration(
       contentPadding: const EdgeInsets.all(15),
-      hintText: 'Enter your Question',
+      hintText: 'How can I assist you today?',
       border: OutlineInputBorder(
         borderRadius: const BorderRadius.all(
           Radius.circular(14),
