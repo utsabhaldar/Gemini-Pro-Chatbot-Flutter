@@ -36,12 +36,28 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 169, 229, 235),
         title: const Text(
-          'Good afternoon, Mr. Arvind',
+          'ByteBot',
           style: TextStyle(
             fontSize: 20,
             color: Color.fromARGB(255, 45, 34, 30),
           ),
         ),
+        actions: [
+          IconButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const HomeScreen(),
+                ),
+              );
+            },
+            icon: const Icon(Icons.refresh),
+          ),
+          const SizedBox(
+            width: 10,
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -49,6 +65,13 @@ class _HomeScreenState extends State<HomeScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const MessageWidget(
+              text: 'Hello Sir,\nHow can I assist you today?',
+              isFromUser: false,
+            ),
+            const SizedBox(
+              height: 20,
+            ),
             Expanded(
               child: ListView.builder(
                 controller: _scrollController,
