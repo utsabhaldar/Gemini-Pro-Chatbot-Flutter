@@ -29,25 +29,64 @@ class AboutItemsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Image.asset("assets/about_images/1.jpg"),
-              Image.asset("assets/about_images/2.jpg"),
-              Image.asset("assets/about_images/3.jpg"),
-              Image.asset("assets/about_images/4.jpg"),
-              Image.asset("assets/about_images/5.jpg"),
-              Image.asset("assets/about_images/6.jpg"),
-              Image.asset("assets/about_images/7.jpg"),
-              Image.asset("assets/about_images/8.jpg"),
-              Image.asset("assets/about_images/9.jpg"),
-              Image.asset("assets/about_images/10.jpg"),
-              Image.asset("assets/about_images/11.jpg"),
-              Image.asset("assets/about_images/12.jpg"),
-              Image.asset("assets/about_images/13.jpg"),
-            ],
+      body: Container(
+        color: const Color.fromARGB(255, 242, 105, 105),
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                Image.asset("assets/about_images/1.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/2.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/3.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/4.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/5.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/6.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/7.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/8.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/9.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/10.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/11.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/12.jpg"),
+                const SizedBox(
+                  height: 10,
+                ),
+                Image.asset("assets/about_images/13.jpg"),
+              ],
+            ),
           ),
         ),
       ),
